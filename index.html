@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>home</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+      <div class="clock-box">
+        <div id="clockbox"></div>
+
+        <script type="text/javascript">
+        function GetClock(){
+        var d=new Date();
+        var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds();
+        if(nmin<=9) nmin="0"+nmin;
+        if(nsec<=9) nsec="0"+nsec;
+        
+        var clocktext=""+nhour+":"+nmin+":"+nsec+"";
+        document.getElementById('clockbox').innerHTML=clocktext;
+        }
+        
+        GetClock();
+        setInterval(GetClock,1000);
+        </script>
+        
+
+        <div id="datebox"></div>
+
+<script type="text/javascript">
+var tday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+var tmonth=["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+function GetClock(){
+var d=new Date();
+var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getFullYear();
+
+var clocktext=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+"";
+document.getElementById('datebox').innerHTML=clocktext;
+}
+
+GetClock();
+setInterval(GetClock,1000);
+</script>
+
+
+
+      </div>
+     
+      <img src="wallpaper/2.gif" alt="gif">
+
+
+        <nav>
+          
+            <ul>
+              <li><a href="https://mail.google.com">gmail</a></li>
+              <li><a href="https://drive.google.com">drive</a></li>
+			  <li><a href="https://banking.ing.de">ing</a></li>
+              <li><a href="https://www.sparkasse-mainfranken.de/de/home/service/online-mobile-banking.html">sparkasse</a></li>
+            </ul>
+        
+			<ul>
+              <li><a href="https://www.youtube.com/feed/subscriptions">youtube</a></li>
+              <li><a href="https://www.twitch.tv/richardlewisreports">twitch</a></li>
+              <li><a href="http://192.168.1.1/">asus</a></li>
+              <li><a href="https://pitchfork.com/">pitchfork</a></li>
+            </ul>
+			
+            <ul>
+              <li><a href="https://4chan.org">4chan</a></li>
+              <li><a href="https://www.reddit.com/r/GlobalOffensive/">reddit</a></li>
+              <li><a href="https://pr0gramm.com/">pr0gramm</a></li>
+              <li><a href="https://twitter.com">twitter</a></li>
+            </ul>
+			
+            <ul>
+              <li><a href="https://4chan.org/mu/">/mu/</a></li>
+              <li><a href="https://4chan.org/g/">/g/</a></li>
+              <li><a href="https://4chan.org/wg/">/wg/</a></li>
+			  <li><a href="https://archived.moe/wg/search/text/homescreen/results/thread/">archive</a></li>
+            </ul>
+
+            
+
+          </nav>
+          <form action="https://duckduckgo.com/" method="GET" target="_self">
+            <input autofocus
+                   name="q"
+                   type="search"
+                   placeholder="duckduckgo"
+                   tabindex="1">
+    </body>
+</html>
